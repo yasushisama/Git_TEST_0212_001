@@ -1,0 +1,71 @@
+【GitHub　覚書】
+■GitHubとは
+■GitとGitHub
+■これだけは知っとけ
+　-リポジストリとは
+　-プライベートORパブリック
+　-更新管理
+■使用方法
+　-登録
+　	1.https://github.com/にアカウント登録
+　	2.リポジストリ作成
+　	  ２－１．【1】のページより「New Repository]をクリック
+　	　２－２．[Repository Name]に作成するリポジトリ名を入力
+　	　２－３．[Initialize this repository with a README]にチェック
+　	　２－４．[Create repository]をクリック
+　	3.次端末へGitをインストール
+　	　３－１．https://git-for-windows.github.io/　からクライアントをダウンロード
+　	　３－２．Git-2.7.1-64-bit.exe　デフォルトインストール
+	4.ローカルリポジトリの作成
+	　４－１．作業ディレクトリを自分の端末で作成する
+	　４－２．Git CMD起動
+　	　４－３．CD で作成したディレクトリへ移動
+	　４－４．[git init .] でローカルリポジトリを作成する
+	　結果：作成したディレクトリに[.git]が作成されている
+　　　　　　　　[.git]　←リポジトリ
+		[作成ディレクトリ]　←作業ディレクトリ
+　-公開
+	5.コミット
+	　５－１．【4】で作成したディレクトリにファイルを置く。
+			・GitHub_Memo.txt
+			・apacheインストールテキスト.txt
+	　５－２．Git CMD起動しディレクトリへ移動
+		[cd <path>]
+	　５－３．ローカルリポジトリの状態を確認
+		[git status]
+		注意：日本語ファイル名だと表記が変になる
+	　５－４．インデックスに登録
+		[git add <path>]
+	　５－５．インデックスに登録されたファイルをコミットする
+		[git commit -m "massage"]
+	　５－６．作成したリモートリポジトリに名前を付与する
+		[git remote add Origin https://github.com/yasushisama/TEST_GIT_201602_001.git]
+		(git remote add <Name> <URL>)
+		注意：URLコピー時、アドレスバーではなくHTTPSのコメントボックス>よりコピーする
+	　５－７．ローカルリポジトリのデータをリモートリポジトリにプッシュ（エクスポート）を行う
+		[ git push -u Origin master ]
+　-更新
+	6.リモートリポジトリよりファイルをダウンロード
+	 （ローカルリポジトリファイルを空にしておく）
+	　[git Clone https://github.com/yasushisama/TEST_GIT_201602_001.git]
+	7.編集
+	　落としたファイルを更新
+	　ローカルリポジトリへ保存
+	　GitCMD起動
+	　下記コマンドを実行
+	　[cd <localrepojitori>]
+	  [git add]
+	  [git commit -m "Massage"]
+          [git push -u Origin master]
+	
+
+
+　-削除
+
+～参考URL～
+http://www.backlog.jp/git-guide/intro/intro1_1.html
+http://qiita.com/megu_ma/items/e459e62821bdd6dbaccb
+http://d.hatena.ne.jp/yk5656/20140212/1393158928
+http://kawaidesu.hatenablog.com/entry/2014/06/28/092347
+http://techacademy.jp/magazine/6235　←　おすすめ
+
